@@ -1,0 +1,54 @@
+:root {
+  --netflix-red: #e50914;
+  --netflix-black: #141414;
+  --netflix-dark: #000000;
+  --netflix-white: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--netflix-black);
+  color: var(--netflix-white);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.movies-container {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.movies-container::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-card {
+  position: relative;
+  margin-right: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.movie-info h3 {
+  margin: 0 0 10px 0;
+}
+
+.movie-info p {
+  font-size: 14px;
+  margin: 0;
+}
